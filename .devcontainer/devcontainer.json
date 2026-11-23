@@ -1,0 +1,11 @@
+{
+  "name": "exe-runner",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "EXE Runner", "onAutoForward": "openBrowser" }
+  },
+  "hostRequirements": { "cpus": 2 }
+}
